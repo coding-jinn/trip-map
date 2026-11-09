@@ -1,7 +1,30 @@
-const routes = document.querySelectorAll('.journey > .route');
-const latestRoute = routes[routes.length - 1];
+const journey = document.querySelector('.journey');
+const portrait = window.matchMedia('(max-width: 600px) and (orientation: portrait)');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const originalMap = journey.innerHTML;
+const mobileStops = [[110, 660], [310, 480], [110, 300], [300, 120]];
+const mobileRoutes = [
+  'M110 660 C110 550 310 590 310 480',
+  'M310 480 C310 370 110 410 110 300',
+  'M110 300 C110 190 300 230 300 120',
+];
 
-if (latestRoute && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+function renderJourney() {
+  journey.innerHTML = originalMap;
+  journey.setAttribute('viewBox', portrait.matches ? '0 0 420 760' : '0 0 900 650');
+  const routes = journey.querySelectorAll(':scope > .route');
+
+  if (portrait.matches) {
+    journey.querySelectorAll('.stop').forEach((stop, index) => {
+      const [x, y] = mobileStops[index];
+      stop.setAttribute('transform', `translate(${x} ${y})`);
+    });
+    routes.forEach((route, index) => route.setAttribute('d', mobileRoutes[index]));
+  }
+
+  const latestRoute = routes[routes.length - 1];
+  if (!latestRoute || reducedMotion.matches) return;
+
   const length = latestRoute.getTotalLength();
   const dashLength = 10;
   const dashSpacing = 25;
@@ -20,3 +43,7 @@ if (latestRoute && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
 
   latestRoute.replaceWith(dashes);
 }
+
+renderJourney();
+portrait.addEventListener('change', renderJourney);
+reducedMotion.addEventListener('change', renderJourney);
