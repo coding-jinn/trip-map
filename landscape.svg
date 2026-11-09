@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c9c5ee"/><stop offset=".55" stop-color="#f7dce3"/><stop offset="1" stop-color="#fff0d7"/>
+    </linearGradient>
+    <linearGradient id="river" x2="0" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c0d9e5"/><stop offset="1" stop-color="#e0e9e7"/>
+    </linearGradient>
+    <g id="cloud" fill="#fff5ef" opacity=".65">
+      <path d="M0 30h30V15h30V0h60v15h40v15h30v20H0z"/>
+    </g>
+    <g id="tree">
+      <path fill="#8d8d9d" d="M-5-10H5v35H-5z"/>
+      <path fill="#91b6a5" d="M0-100l-32 42h13l-27 38h15l-21 30H52L31-20h15L19-58h13z"/>
+      <path fill="#b6d0b4" d="M0-100l-32 42h13l-27 38h15l-21 30H0z"/>
+    </g>
+    <g id="flower">
+      <path stroke="#8eaf93" stroke-width="3" d="M0 0v14"/>
+      <path fill="#f8dcad" d="M-7-4h4v-5h6v5h5v7H3v4h-6V3h-4z"/>
+      <path fill="#e4a6b6" d="M-2-2h5v5h-5z"/>
+    </g>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1600v1000H0z"/>
+  <circle cx="1200" cy="230" r="77" fill="#fff1cc" opacity=".85"/>
+  <use href="#cloud" x="140" y="175"/>
+  <use href="#cloud" x="620" y="100" transform="translate(155 25) scale(.8)"/>
+  <use href="#cloud" x="1280" y="330"/>
+  <path fill="#b9b6d5" d="M0 550l160-170 110 100 200-240 210 260 190-190 155 155 190-160 185 220v475H0z"/>
+  <path fill="#e5d6e7" d="M470 240l-64 77 48-13 28 31 24-15 45 20zm400 70l-50 50 40-8 23 21 25-13 29 17z"/>
+  <path fill="#a4b8ca" d="M0 590l170-90 185 95 225-132 220 130 220-90 240 90 200-120 140 90v437H0z"/>
+  <path fill="#b5cbbd" d="M0 670q220-180 450-30t440-15 390-15 320 10v380H0z"/>
+  <!-- A little castle above the valley. -->
+  <g transform="translate(1070 490)">
+    <path fill="#c5b9cf" d="M0 0h24v-22h17V0h24v-22h17V0h24v108H0z"/>
+    <path fill="#eee0df" d="M-25 18H5v90h-30zm127 0h30v90h-30zM22 35h60v73H22z"/>
+    <path fill="#a99bbd" d="M-32 18l22-33 22 33zm126 0l23-33 23 33z"/>
+    <path fill="#a59aaf" d="M43 78q10-20 20 0v30H43zM-15 40h9v16h-9zm126 0h9v16h-9z"/>
+    <path stroke="#a99bbd" stroke-width="3" d="M52-20v-40"/>
+    <path fill="#e4a8be" d="M54-60h31l-10 10 10 10H54z"/>
+  </g>
+  <path fill="#9ebca7" d="M0 760q230-180 510-60t530-20 560 20v300H0z"/>
+  <path fill="url(#river)" d="M840 650q-95 64 0 116t-15 100-120 134h330q130-117-28-179T840 650z"/>
+  <path stroke="#f4f0dc" stroke-width="5" opacity=".6" d="M818 727h50m-20 76h83m-139 99h121m-87 44h108"/>
+  <g>
+    <use href="#tree" x="150" y="715"/><use href="#tree" x="215" y="740"/>
+    <use href="#tree" x="107" y="770"/><use href="#tree" x="1315" y="710"/>
+    <use href="#tree" x="1380" y="750"/><use href="#tree" x="1450" y="724"/>
+  </g>
+  <path fill="#bcd0ab" d="M0 855q210-100 420-5t290 150H0z"/>
+  <path fill="#b1c7a3" d="M1600 820q-210-45-380 85l-120 95h500z"/>
+  <path fill="#e8d8b4" d="M0 930q190-100 410-30t200 100h-96q-85-90-270-88T0 980z"/>
+  <g opacity=".9">
+    <use href="#flower" x="95" y="875"/><use href="#flower" x="135" y="890"/>
+    <use href="#flower" x="350" y="830"/><use href="#flower" x="380" y="848"/>
+    <use href="#flower" x="485" y="935"/><use href="#flower" x="520" y="955"/>
+    <use href="#flower" x="1300" y="935"/><use href="#flower" x="1330" y="920"/>
+    <use href="#flower" x="1480" y="865"/><use href="#flower" x="1515" y="885"/>
+  </g>
+</svg>

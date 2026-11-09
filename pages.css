@@ -1,0 +1,110 @@
+:root {
+  color-scheme: light;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #69617f;
+  background: #d3cce9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: url("landscape.svg") center center / cover no-repeat;
+}
+
+.trip-map {
+  width: min(100%, 1100px);
+  padding: 24px 12px;
+}
+
+.stage-label {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: normal;
+  letter-spacing: .12em;
+  text-shadow: 0 2px 8px #fffaf2;
+}
+
+.journey {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.route {
+  fill: none;
+  stroke: #fff3da;
+  stroke-width: 7;
+  stroke-dasharray: 10 15;
+  stroke-linecap: round;
+  filter: drop-shadow(0 2px 2px #746d8a66);
+}
+
+.ground-shadow {
+  fill: #6a748533;
+}
+
+.pedestal-side {
+  fill: #b2a2c4;
+  stroke: #8e809f;
+  stroke-width: 2;
+}
+
+.pedestal-rim {
+  fill: #f2e6db;
+  stroke: #b7a7c6;
+  stroke-width: 2;
+}
+
+.pedestal-top {
+  fill: #d6c8de;
+}
+
+.pedestal-detail {
+  fill: none;
+  stroke: #d8cae0;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.stop text {
+  fill: #695b7c;
+  stroke: #fff5e7;
+  stroke-width: 5;
+  paint-order: stroke;
+  text-anchor: middle;
+  font-size: 36px;
+}
+
+.current .pedestal-top {
+  fill: #f5dcae;
+}
+
+.current .pedestal-rim {
+  stroke: #fff4d9;
+  filter: drop-shadow(0 0 12px #fff0c3);
+}
+
+.marker {
+  fill: #fff1c9;
+  stroke: #b9a0bb;
+  stroke-width: 2;
+}
+
+@media (max-width: 600px) {
+  .trip-map {
+    padding-inline: 4px;
+  }
+
+  .journey {
+    min-height: 60svh;
+  }
+}
