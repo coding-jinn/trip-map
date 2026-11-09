@@ -52,6 +52,21 @@ body {
   fill: #6a748533;
 }
 
+.route-dash {
+  animation: reveal-dash 1ms steps(1, end) both;
+}
+
+@keyframes reveal-dash {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-dash {
+    animation: none;
+  }
+}
+
 .pedestal-side {
   fill: #b2a2c4;
   stroke: #8e809f;
